@@ -166,7 +166,7 @@ EXECUTE PROCEDURE check_ride();
 CREATE OR REPLACE FUNCTION check_rank() 
 RETURNS TRIGGER AS $$
 	BEGIN 
-	RETURN (OLD.did, OLD.pid, OLD.rdate, OLD.rtime, OLD.edate, OLD.etime,5,OLD.comment);
+	RETURN (NEW.did, NEW.pid, NEW.rdate, NEW.rtime, NEW.edate, NEW.etime,5,NEW.comment);
 	END; 
 $$ LANGUAGE plpgsql; 
 
